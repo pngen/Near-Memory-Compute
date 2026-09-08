@@ -1,0 +1,21 @@
+# Each example is a small, self-contained program demonstrating actual runtime behavior.
+
+function(nmc_add_example name)
+  add_executable(${name} ${ARGN})
+  target_compile_features(${name} PRIVATE cxx_std_20)
+  target_compile_options(${name} PRIVATE /W4 /WX /EHsc /permissive-)
+  target_include_directories(${name} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/..)
+  target_link_libraries(${name} PRIVATE near_memory_compute)
+endfunction()
+
+nmc_add_example(nmc_example_basic_target basic_target.cpp)
+nmc_add_example(nmc_example_operation_selection operation_selection.cpp)
+nmc_add_example(nmc_example_movement_vs_compute movement_vs_compute.cpp)
+nmc_add_example(nmc_example_stale_data_rejection stale_data_rejection.cpp)
+nmc_add_example(nmc_example_fallback fallback.cpp)
+nmc_add_example(nmc_example_drain drain.cpp)
+nmc_add_example(nmc_example_target_failure target_failure.cpp)
+nmc_add_example(nmc_example_synthetic_pim synthetic_pim.cpp)
+nmc_add_example(nmc_example_host_local_execution host_local_execution.cpp)
+nmc_add_example(nmc_example_cuda_conventional_comparison cuda_conventional_comparison.cpp)
+nmc_add_example(nmc_example_coordinator_recovery coordinator_recovery.cpp)

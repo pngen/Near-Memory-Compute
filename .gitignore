@@ -1,0 +1,15 @@
+build*/
+build/
+build-*/
+.vs/
+*.log
+*.bin
+*.tmp
+*.exe
+*.lib
+*.obj
+*.pdb
+*.idb
+*.ilk
+CMakeUserPresets.json
+out/
