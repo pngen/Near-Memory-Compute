@@ -36,7 +36,7 @@ dispatch and completion authority, result provenance, stale-result rejection, fa
 degradation, draining, target withdrawal, worker/process authority, durable control-plane state,
 conservative restart semantics, revalidation, and inspection/explanation.
 
-It does not own general Memory Expansion Fabric capacity management, CXL device discovery or CXL
+It does not own general [Memory Expansion Fabric](https://github.com/pngen/Memory-Expansion-Fabric) capacity management, CXL device discovery or CXL
 protocol implementation, generic memory allocation, GPU memory-service allocation/residency,
 Transfer Fabric movement execution, Unified Buffer ownership/lifetime, generic workload
 scheduling, global accelerator placement, arbitrary compiler/runtime optimization, arbitrary
